@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>Спецпрактикум «Позволение быть Собой» | Лида Приходченко</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { color-scheme: light only; background-color: #FFF8F0 !important; }
+  :root {
+    --cream: #FFF8F0; --beige: #F5E6D3; --emerald: #50C878;
+    --deep-emerald: #2E8B57; --dark-teal: #008B8B; --sage: #9CAF88;
+    --terracotta: #E07A5F; --gold: #F4C542; --gold-dark: #C8A028;
+    --dark: #232A26; --mid: #323C35; --desc: #4B5C4E;
+    --subtle: #6E7D72; --white: #FFFFFF;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--cream) !important; color: var(--dark) !important;
+    min-height: 100vh; overflow-x: hidden; position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; width: 450px; height: 400px;
+    top: -80px; left: -100px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(80,200,120,0.16) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; width: 400px; height: 350px;
+    bottom: -50px; right: -80px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(244,197,66,0.1) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  .container {
+    max-width: 580px; margin: 0 auto; padding: 32px 24px 48px;
+    position: relative; z-index: 1;
+  }
+  .header {
+    text-align: center; padding: 24px 0 28px;
+    border-top: 1px solid rgba(80,200,120,0.4);
+  }
+  .school-name {
+    font-weight: 500; font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 8px;
+  }
+  .trainer-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 28px; color: var(--dark); margin-bottom: 4px;
+  }
+  .trainer-title {
+    font-weight: 300; font-size: 15px; color: var(--mid); margin-bottom: 20px;
+  }
+  .gold-line { width: 80px; height: 2px; background: var(--gold); margin: 0 auto; }
+  .course-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 30px; color: var(--dark-teal); text-align: center;
+    margin: 28px 0 20px; line-height: 1.3;
+  }
+  .text-block {
+    font-size: 16px; line-height: 1.7; color: var(--dark); margin-bottom: 20px;
+  }
+  .text-block p { margin-bottom: 10px; }
+  .section-header {
+    display: flex; align-items: center; gap: 12px; margin: 28px 0 16px;
+  }
+  .section-accent {
+    width: 5px; height: 26px; border-radius: 3px; flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 24px; color: var(--dark);
+  }
+  .day-card {
+    background: rgba(255,255,255,0.8); border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 10px;
+    border: 1px solid rgba(200,210,200,0.5);
+  }
+  .day-header {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 17px; color: var(--deep-emerald); margin-bottom: 8px;
+  }
+  .day-desc {
+    font-size: 15px; color: var(--desc); line-height: 1.7;
+  }
+  .day-desc p { margin-bottom: 4px; }
+  .highlight-block {
+    background: rgba(80,200,120,0.08); border-radius: 14px;
+    padding: 20px 24px; margin: 24px 0; text-align: center;
+    border: 1px solid rgba(80,200,120,0.2);
+  }
+  .highlight-big {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 26px; color: var(--deep-emerald); margin-bottom: 6px;
+  }
+  .highlight-text {
+    font-size: 16px; color: var(--dark); line-height: 1.6;
+  }
+  .info-block {
+    background: var(--beige); border-radius: 14px;
+    padding: 22px 24px; margin: 24px 0; border: 2px solid var(--gold);
+  }
+  .info-block p {
+    font-size: 16px; color: var(--dark); line-height: 1.7; margin-bottom: 8px;
+  }
+  .price-line {
+    font-weight: 600; font-size: 22px; color: var(--deep-emerald); margin: 12px 0 4px;
+  }
+  .price-note {
+    font-size: 15px; color: var(--deep-emerald); font-style: italic;
+  }
+  .btn {
+    display: block; text-align: center; padding: 16px 24px;
+    border-radius: 12px; font-size: 16px; font-weight: 600;
+    text-decoration: none; margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.5px;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .btn-primary { background: var(--deep-emerald); color: white; }
+  .btn-secondary {
+    background: var(--white); color: var(--deep-emerald);
+    border: 2px solid var(--emerald);
+  }
+  .btn-back {
+    background: transparent; color: var(--desc); border: 1px solid rgba(200,210,200,0.5);
+    font-weight: 400; font-size: 15px;
+  }
+  .contact {
+    text-align: center; padding-top: 24px; margin-top: 28px;
+    border-top: 1px solid rgba(244,197,66,0.35);
+  }
+  .contact-item { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .contact-link { font-size: 16px; color: var(--deep-emerald); text-decoration: none; }
+  .contact-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center; margin-top: 32px; padding-top: 18px;
+    border-top: 1px solid rgba(80,200,120,0.35);
+  }
+  .footer-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--deep-emerald);
+  }
+  @media (max-width: 480px) {
+    .container { padding: 24px 16px 40px; }
+    .course-title { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="school-name">Школа Осознанного Творения</div>
+    <div class="trainer-name">Лида Приходченко</div>
+    <div class="trainer-title">Тренер эмоционального интеллекта</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="course-title">Спецпрактикум<br>«Позволение быть Собой»</div>
+
+  <div class="text-block">
+    <p>На котором вы начнёте создавать радостные отношения с собой и с близкими.</p>
+    <p>Внедрив 3-шаговую модель по осознанию своих чувств и эмоций и делая простые действия, вы начнёте осваивать навык управления своими чувствами и эмоциями уже за 7 дней.</p>
+    <p>Это работа со мной, где основная цель - натренировать базовый навык для контакта с Собой: осознание своих чувств и эмоций, используя очень простые действия.</p>
+    <p>Это 7 дней плотной работы с поддержкой, для формирования привычки выбирать то, что хочется, и вместо привычного реагирования делать выбор осознанно.</p>
+    <p>Это дни, посвящённые практикам, которые дадут импульс для начала движения к созданию тех отношений, которые хочется, чтобы были.</p>
+  </div>
+
+  <!-- Program -->
+  <div class="section-header">
+    <div class="section-accent" style="background: var(--dark-teal);"></div>
+    <div class="section-title">Программа</div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 1 (среда): Общая встреча</div>
+    <div class="day-desc">
+      <p>Знакомство с основным инструментом.</p>
+      <p>Влияние чувств и эмоций на нашу жизнь.</p>
+      <p>Чувства, эмоции и концепции - осознаём отличие.</p>
+      <p>Создание образа, который хочу проявлять.</p>
+      <p>Первое домашнее задание.</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 2 (четверг): Личная встреча</div>
+    <div class="day-desc">
+      <p>Создаём пошаговый план для реализации желаемого.</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 3 (пятница): Общая встреча</div>
+    <div class="day-desc">
+      <p>Рефлексия изменений.</p>
+      <p>Практика осознанности.</p>
+      <p>Знакомство с определением себя как с инструментом.</p>
+      <p>Практика осознанного выбора чувств и эмоций.</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 4 (суббота/воскресенье): Общение в чате</div>
+    <div class="day-desc">
+      <p>Рефлексия изменений.</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 5 (понедельник): Общая встреча</div>
+    <div class="day-desc">
+      <p>Упражнение «Собачка».</p>
+      <p>Изучаем и практикуем инструмент «Намерение».</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 6 (вторник): Общение в чате</div>
+    <div class="day-desc">
+      <p>Рефлексия изменений.</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">День 7 (среда): Общая встреча</div>
+    <div class="day-desc">
+      <p>Честный разговор о влиянии общественного мнения на нас.</p>
+      <p>Подводим итоги.</p>
+    </div>
+  </div>
+
+  <!-- Highlight -->
+  <div class="highlight-block">
+    <div class="highlight-big">Всего 6 мест</div>
+    <div class="highlight-text">
+      Спецпрактикум - это тест-драйв личной работы со мной в доступном формате.<br>
+      Ценности тут на всю тысячу долларов.
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="info-block">
+    <p>Весь практикум проходит в закрытой группе Телеграм.</p>
+    <p>Встречи с 18:30 до 20:30 по времени Калифорнии (PST).</p>
+    <p>По окончанию практикума у вас останутся все материалы, к которым вы сможете возвращаться, когда будет необходимо.</p>
+    <p>Старт - вторая среда каждого месяца.</p>
+    <div class="price-line">Стоимость: $171</div>
+    <div class="price-note">Гарантия возврата денег.</div>
+  </div>
+
+  <!-- Buttons -->
+  <a href="https://t.me/lidacoach" target="_blank" class="btn btn-primary">ЗАПИСАТЬСЯ</a>
+  <a href="webinar.html" class="btn btn-secondary">ПОСМОТРЕТЬ БЕСПЛАТНЫЙ ВЕБИНАР</a>
+  <a href="index.html" class="btn btn-back">← Курс «Пробуждение»</a>
+
+  <div class="text-block" style="text-align: center; margin-top: 16px;">
+    <p>Пишите мне в личное сообщение <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a> слово «ПРАКТИКУМ», чтобы принять участие.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact">
+    <div class="contact-item">Telegram: <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a></div>
+    <div class="contact-item">Facebook: @lidacoach</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">Для женщин, которые возвращаются к Себе</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>Вебинар «Позволение быть Собой» | Лида Приходченко</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { color-scheme: light only; background-color: #FFF8F0 !important; }
+  :root {
+    --cream: #FFF8F0; --beige: #F5E6D3; --emerald: #50C878;
+    --deep-emerald: #2E8B57; --dark-teal: #008B8B; --sage: #9CAF88;
+    --terracotta: #E07A5F; --gold: #F4C542; --gold-dark: #C8A028;
+    --dark: #232A26; --mid: #323C35; --desc: #4B5C4E;
+    --subtle: #6E7D72; --white: #FFFFFF;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--cream) !important; color: var(--dark) !important;
+    min-height: 100vh; overflow-x: hidden; position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; width: 500px; height: 400px;
+    top: -100px; right: -120px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(80,200,120,0.15) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; width: 350px; height: 350px;
+    bottom: -50px; left: -60px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(156,175,136,0.12) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  .container {
+    max-width: 580px; margin: 0 auto; padding: 32px 24px 48px;
+    position: relative; z-index: 1;
+  }
+  .header {
+    text-align: center; padding: 24px 0 28px;
+    border-top: 1px solid rgba(80,200,120,0.4);
+  }
+  .school-name {
+    font-weight: 500; font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 8px;
+  }
+  .trainer-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 28px; color: var(--dark); margin-bottom: 4px;
+  }
+  .trainer-title {
+    font-weight: 300; font-size: 15px; color: var(--mid); margin-bottom: 20px;
+  }
+  .gold-line { width: 80px; height: 2px; background: var(--gold); margin: 0 auto; }
+  .page-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 30px; color: var(--dark-teal); text-align: center;
+    margin: 28px 0 20px; line-height: 1.3;
+  }
+  .text-block {
+    font-size: 16px; line-height: 1.8; color: var(--dark); margin-bottom: 20px;
+  }
+  .text-block p { margin-bottom: 10px; }
+  .video-label {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 22px; color: var(--deep-emerald); margin: 28px 0 6px;
+  }
+  .video-sublabel {
+    font-size: 15px; color: var(--desc); margin-bottom: 14px; line-height: 1.5;
+  }
+  .video-wrapper {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    overflow: hidden; border-radius: 14px; margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .video-wrapper iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+  }
+  .btn {
+    display: block; text-align: center; padding: 16px 24px;
+    border-radius: 12px; font-size: 16px; font-weight: 600;
+    text-decoration: none; margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.5px;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .btn-primary { background: var(--deep-emerald); color: white; }
+  .btn-secondary {
+    background: var(--white); color: var(--deep-emerald);
+    border: 2px solid var(--emerald);
+  }
+  .btn-back {
+    background: transparent; color: var(--desc); border: 1px solid rgba(200,210,200,0.5);
+    font-weight: 400; font-size: 15px;
+  }
+  .contact {
+    text-align: center; padding-top: 24px; margin-top: 28px;
+    border-top: 1px solid rgba(244,197,66,0.35);
+  }
+  .contact-item { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .contact-link { font-size: 16px; color: var(--deep-emerald); text-decoration: none; }
+  .contact-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center; margin-top: 32px; padding-top: 18px;
+    border-top: 1px solid rgba(80,200,120,0.35);
+  }
+  .footer-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--deep-emerald);
+  }
+  @media (max-width: 480px) {
+    .container { padding: 24px 16px 40px; }
+    .page-title { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="school-name">Школа Осознанного Творения</div>
+    <div class="trainer-name">Лида Приходченко</div>
+    <div class="trainer-title">Тренер эмоционального интеллекта</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="page-title">Позволение быть Собой</div>
+
+  <div class="text-block">
+    <p>Это фрагмент живого вебинара от 25 марта 2026 года - самая суть, без вступления и организационной части.</p>
+    <p>Вы услышите разговор с участницей и увидите слайды - на этом вебинаре я работаю голосом, без камеры.
+    Так что просто слушайте и смотрите на экран.</p>
+  </div>
+
+  <div class="text-block">
+    <p>Здесь я рассказываю про навыки, с которых всё начинается.</p>
+    <p>Они настолько простые, что мы о них забываем.</p>
+    <p>В детстве это было само собой разумеющимся, а потом внешний мир стал для нас авторитетом, и мы начали жить по его правилам.</p>
+    <p>Хотя на самом деле мы знаем про себя больше, чем внешний мир.</p>
+  </div>
+
+  <div class="text-block">
+    <p>Я не работаю с прошлым - это делают психологи.</p>
+    <p>Моя задача - чтобы человек начал жить настоящим.</p>
+    <p>А для этого нужны навыки.</p>
+    <p>Они просто база.</p>
+  </div>
+
+  <div class="text-block">
+    <p>На вебинаре я даю три шага.</p>
+    <p>Если делать их каждый день - жизнь начинает меняться, потому что начинают реализовываться желания.</p>
+    <p>Не через усилие, а через осознанный выбор чувств и эмоций.</p>
+  </div>
+
+  <div class="text-block">
+    <p>Это те самые навыки, на которых строится мой 7-дневный практикум «Позволение быть Собой» - там всё то же самое, только расширенная версия, с практикой и поддержкой.</p>
+    <p>И на них же построен курс «Пробуждение» - первая ступень программы «Ключи к Себе».</p>
+  </div>
+
+  <!-- Webinar video -->
+  <div class="video-label">Вебинар</div>
+  <div class="video-sublabel">Смотрите и слушайте, о чём эта практика и как она работает.</div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/QyJ4bbYGWoY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- Podcast video -->
+  <div class="video-label">Подкаст</div>
+  <div class="video-sublabel">Та же тема, можно слушать на ходу.</div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/qWyR31I1q0w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- Buttons -->
+  <a href="praktikum.html" class="btn btn-primary">ЗАПИСАТЬСЯ НА ПРАКТИКУМ</a>
+  <a href="index.html" class="btn btn-secondary">КУРС «ПРОБУЖДЕНИЕ»</a>
+
+  <!-- Contact -->
+  <div class="contact">
+    <div class="contact-item">Telegram: <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a></div>
+    <div class="contact-item">Facebook: @lidacoach</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">Для женщин, которые возвращаются к Себе</div>
+  </div>
+
+</div>
+</body>
+</html>
