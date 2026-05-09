@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>Осознание - Ключи к Себе | Лида Приходченко</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { color-scheme: light only; background-color: #FFF8F0 !important; }
+  :root {
+    --cream: #FFF8F0; --beige: #F5E6D3; --emerald: #50C878;
+    --deep-emerald: #2E8B57; --dark-teal: #008B8B; --sage: #9CAF88;
+    --terracotta: #E07A5F; --gold: #F4C542; --gold-dark: #C8A028;
+    --dark: #232A26; --mid: #323C35; --desc: #4B5C4E;
+    --subtle: #6E7D72; --white: #FFFFFF;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--cream) !important; color: var(--dark) !important;
+    min-height: 100vh; overflow-x: hidden; position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; width: 500px; height: 450px;
+    top: -100px; right: -100px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,139,139,0.15) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; width: 400px; height: 400px;
+    bottom: -50px; left: -80px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(80,200,120,0.13) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  .container {
+    max-width: 580px; margin: 0 auto; padding: 32px 24px 48px;
+    position: relative; z-index: 1;
+  }
+  .header {
+    text-align: center; padding: 24px 0 28px;
+    border-top: 1px solid rgba(80,200,120,0.4);
+  }
+  .school-name {
+    font-weight: 500; font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 8px;
+  }
+  .trainer-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 28px; color: var(--dark); margin-bottom: 4px;
+  }
+  .trainer-title {
+    font-weight: 300; font-size: 15px; color: var(--mid); margin-bottom: 20px;
+  }
+  .gold-line { width: 80px; height: 2px; background: var(--gold); margin: 0 auto; }
+
+  .step-marker {
+    text-align: center; font-weight: 500; font-size: 13px; letter-spacing: 2px;
+    color: var(--gold-dark); margin-top: 28px; text-transform: uppercase;
+  }
+  .course-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 36px; color: var(--dark-teal); text-align: center;
+    margin: 6px 0 4px; line-height: 1.2;
+  }
+  .course-program {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400;
+    font-size: 17px; color: var(--mid); text-align: center; margin-bottom: 28px;
+  }
+
+  .text-block {
+    font-size: 16px; line-height: 1.75; color: var(--dark); margin-bottom: 18px;
+  }
+  .text-block p { margin-bottom: 10px; }
+  .text-block.intro {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 19px; color: var(--dark-teal); line-height: 1.55;
+    margin-bottom: 22px; padding: 0 6px;
+  }
+  .divider {
+    width: 60px; height: 1px; background: var(--gold);
+    margin: 32px auto; opacity: 0.6;
+  }
+
+  .part-section {
+    background: rgba(255,255,255,0.7); border-radius: 16px;
+    padding: 26px 24px; margin: 24px 0;
+    border: 1px solid rgba(200,210,200,0.6);
+  }
+  .part-label {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 14px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold-dark); margin-bottom: 4px;
+  }
+  .part-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 26px; color: var(--dark); margin-bottom: 6px;
+  }
+  .part-start {
+    font-size: 16px; color: var(--deep-emerald); font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .part-info {
+    font-size: 15px; line-height: 1.7; color: var(--desc);
+    margin-bottom: 18px;
+  }
+  .part-info p { margin-bottom: 6px; }
+
+  .tariffs-label {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 18px; color: var(--dark); margin: 18px 0 12px;
+  }
+
+  .pay-btn {
+    display: block; text-align: center; padding: 16px 20px;
+    border-radius: 12px; font-size: 15px; font-weight: 600;
+    text-decoration: none; margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.3px;
+    cursor: pointer; border: none; width: 100%;
+    font-family: 'Raleway', sans-serif;
+  }
+  .pay-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .pay-btn-1 { background: var(--sage); color: white; }
+  .pay-btn-2 { background: var(--dark-teal); color: white; }
+  .pay-btn-3 { background: var(--deep-emerald); color: white; font-size: 16px; }
+
+  .pay-info {
+    background: var(--beige); border-radius: 14px;
+    padding: 20px 22px; margin: 24px 0;
+    border: 2px solid var(--gold);
+    font-size: 15px; line-height: 1.7; color: var(--dark);
+  }
+  .pay-info p { margin-bottom: 8px; }
+  .pay-info strong { color: var(--deep-emerald); }
+
+  /* Modal */
+  .modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(35,42,38,0.7); z-index: 1000;
+    align-items: center; justify-content: center; padding: 16px;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.active { display: flex; }
+  .modal {
+    background: var(--cream); border-radius: 16px; max-width: 460px; width: 100%;
+    padding: 28px 26px; max-height: 90vh; overflow-y: auto;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  .modal-close {
+    float: right; background: none; border: none; font-size: 24px;
+    color: var(--desc); cursor: pointer; line-height: 1; padding: 0;
+    margin-top: -4px;
+  }
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 22px; color: var(--dark-teal); margin-bottom: 6px;
+  }
+  .modal-amount {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 32px; color: var(--deep-emerald); margin-bottom: 16px;
+  }
+  .modal-section {
+    margin-bottom: 14px; padding-bottom: 14px;
+    border-bottom: 1px solid rgba(200,210,200,0.6);
+  }
+  .modal-section:last-of-type { border-bottom: none; }
+  .modal-method {
+    font-weight: 600; font-size: 15px; color: var(--dark); margin-bottom: 6px;
+  }
+  .modal-detail {
+    font-size: 16px; color: var(--deep-emerald); font-family: 'Courier New', monospace;
+    word-break: break-all; padding: 8px 12px;
+    background: rgba(255,255,255,0.7); border-radius: 8px;
+    border: 1px solid rgba(200,210,200,0.5);
+  }
+  .modal-instruction {
+    font-size: 14px; line-height: 1.6; color: var(--desc);
+    margin-top: 16px; padding: 14px;
+    background: rgba(80,200,120,0.08); border-radius: 10px;
+  }
+  .modal-instruction strong { color: var(--deep-emerald); }
+  .modal-comment {
+    font-size: 14px; color: var(--mid); margin-top: 8px;
+    font-style: italic;
+  }
+
+  .contact {
+    text-align: center; padding-top: 24px; margin-top: 28px;
+    border-top: 1px solid rgba(244,197,66,0.35);
+  }
+  .contact-item { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .contact-link { font-size: 16px; color: var(--deep-emerald); text-decoration: none; }
+  .contact-link:hover { text-decoration: underline; }
+
+  .footer {
+    text-align: center; margin-top: 32px; padding-top: 18px;
+    border-top: 1px solid rgba(80,200,120,0.35);
+  }
+  .footer-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--deep-emerald);
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 24px 16px 40px; }
+    .course-title { font-size: 30px; }
+    .part-title { font-size: 22px; }
+    .part-section { padding: 22px 18px; }
+    .modal { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="school-name">Школа Осознанного Творения</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="step-marker">Вторая ступень</div>
+  <div class="course-title">Осознание</div>
+  <div class="course-program">Курс «Ключи к Себе»</div>
+
+  <div class="text-block intro">
+    Этот курс - о том, как наблюдать себя непрерывно: днём, ночью, во сне, в момент мысли и в момент выбора.
+  </div>
+
+  <div class="text-block">
+    <p>Вы научитесь видеть слои собственного сознания, понимать, как устроены мышление, время и сны, и работать с физическим миром как с продолжением себя - без эзотерики, активаций и психотехник «на веру».</p>
+    <p>Никаких космических энергий и третьих глаз - только то, что вы можете проверить на себе.</p>
+    <p>Каждое занятие даёт результат, который вы переносите в свою жизнь за неделю до следующего шага.</p>
+    <p>Курс для тех, кто уже наблюдал за собой и хочет наконец собрать эту «кашу» в понятную систему - и научиться управлять своей реальностью из ясной точки, оставаясь собой.</p>
+  </div>
+
+  <div class="text-block" style="text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: var(--mid); margin-top: 18px;">
+    <p>Ведущий - трансформационный тренер эмоционального интеллекта Лида Приходченко</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PART 1 -->
+  <div class="part-section">
+    <div class="part-label">Часть 1</div>
+    <div class="part-title">11 вебинаров</div>
+    <div class="part-start">Старт - 6 июня 2026 года</div>
+
+    <div class="part-info">
+      <p>Каждую субботу в 10:00 утра по времени Калифорнии (PST) в закрытой группе Телеграм появляется новая запись.</p>
+      <p>Длительность одного вебинара - от 30 минут до 1,5 часов.</p>
+      <p>Практики даются в вебинаре как домашние задания.</p>
+      <p>В закрытой группе - обсуждение между участниками.</p>
+    </div>
+
+    <div class="tariffs-label">Тарифы Части 1:</div>
+
+    <button class="pay-btn pay-btn-1" onclick="openPayment('1 вебинар (Часть 1)', 49, 'Осознание - 1 вебинар')">
+      ОПЛАТИТЬ 1 ВЕБИНАР - $49
+    </button>
+    <button class="pay-btn pay-btn-2" onclick="openPayment('4 вебинара (Часть 1)', 190, 'Осознание - 4 вебинара')">
+      ОПЛАТИТЬ 4 ВЕБИНАРА - $190
+    </button>
+    <button class="pay-btn pay-btn-3" onclick="openPayment('Все 11 вебинаров (Часть 1)', 510, 'Осознание - Часть 1 (11 вебинаров)')">
+      ОПЛАТИТЬ 11 ВЕБИНАРОВ - $510
+    </button>
+  </div>
+
+  <!-- PART 2 -->
+  <div class="part-section">
+    <div class="part-label">Часть 2</div>
+    <div class="part-title">12 вебинаров</div>
+    <div class="part-start">Старт - 5 сентября 2026 года</div>
+
+    <div class="part-info">
+      <p>Условия и формат - те же, что в Части 1.</p>
+      <p>Подробное описание появится ближе к старту.</p>
+    </div>
+
+    <div class="tariffs-label">Тарифы Части 2:</div>
+
+    <button class="pay-btn pay-btn-1" onclick="openPayment('1 вебинар (Часть 2)', 49, 'Осознание Часть 2 - 1 вебинар')">
+      ОПЛАТИТЬ 1 ВЕБИНАР - $49
+    </button>
+    <button class="pay-btn pay-btn-2" onclick="openPayment('4 вебинара (Часть 2)', 190, 'Осознание Часть 2 - 4 вебинара')">
+      ОПЛАТИТЬ 4 ВЕБИНАРА - $190
+    </button>
+    <button class="pay-btn pay-btn-3" onclick="openPayment('Все 12 вебинаров (Часть 2)', 510, 'Осознание - Часть 2 (12 вебинаров)')">
+      ОПЛАТИТЬ 12 ВЕБИНАРОВ - $510
+    </button>
+  </div>
+
+  <!-- Upgrade info -->
+  <div class="part-section" style="background: rgba(244,197,66,0.06);">
+    <div class="part-label" style="color: var(--gold-dark);">Возможность апгрейда</div>
+    <div class="part-info" style="margin-bottom: 0;">
+      <p>Начали с одного вебинара и хочется продолжить - можно доплатить разницу:</p>
+      <p>· С 1 вебинара ($49) до 4 вебинаров - доплата $141</p>
+      <p>· С 1 вебинара ($49) до полного курса - доплата $461</p>
+      <p>· С 4 вебинаров ($190) до полного курса - доплата $320</p>
+      <p style="margin-top: 12px;">Оплачивайте разницу тем же способом, в комментарии указывайте «Апгрейд: было [X], стало [Y]».</p>
+    </div>
+  </div>
+
+  <!-- Payment info -->
+  <div class="pay-info">
+    <p><strong>После оплаты:</strong></p>
+    <p>Пришлите скриншот оплаты в Телеграм <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a>, и я добавлю вас в закрытую группу.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact">
+    <div class="contact-item">Telegram: <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a></div>
+    <div class="contact-item">Facebook: @lidacoach</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">Для женщин, которые возвращаются к Себе</div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="paymentModal" onclick="if(event.target===this) closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-title" id="modalTitle">Оплата</div>
+    <div class="modal-amount" id="modalAmount">$0</div>
+
+    <div class="modal-section">
+      <div class="modal-method">Zelle</div>
+      <div class="modal-detail">9166942111</div>
+    </div>
+
+    <div class="modal-instruction">
+      <p><strong>В комментарии к платежу укажите:</strong></p>
+      <div class="modal-comment" id="modalComment"></div>
+      <p style="margin-top:12px;">После оплаты пришлите скриншот в Телеграм <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a>, и я добавлю вас в закрытую группу.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openPayment(label, amount, comment) {
+    document.getElementById('modalTitle').textContent = 'Оплата: ' + label;
+    document.getElementById('modalAmount').textContent = '$' + amount;
+    document.getElementById('modalComment').textContent = '«' + comment + '»';
+    document.getElementById('paymentModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('paymentModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>
