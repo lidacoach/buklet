@@ -1,0 +1,14 @@
+{
+  "recurse": true,
+  "concurrency": 5,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 3,
+  "retryErrorsJitter": 1000,
+  "skip": [
+    "^https?://(www\\.)?facebook\\.com",
+    "^https?://(www\\.)?t\\.me",
+    "^https?://(www\\.)?youtube\\.com",
+    "^https?://docs\\.google\\.com"
+  ]
+}

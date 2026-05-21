@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: HTML & ссылки
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Валидация HTML
+        run: npm run validate:html
+      - name: Проверка ссылок
+        run: npm run validate:links
+
+  e2e:
+    name: Playwright (модалка оплаты)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Установка браузеров Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Запуск тестов
+        run: npm run test:e2e
+      - name: Загрузка отчёта
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7

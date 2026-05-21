@@ -1,0 +1,17 @@
+{
+  "name": "buklet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лендинги Лиды Приходченко",
+  "scripts": {
+    "validate:html": "html-validate \"*.html\"",
+    "validate:links": "linkinator . --recurse --config linkinator.config.json",
+    "test:e2e": "playwright test",
+    "test": "npm run validate:html && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "html-validate": "^9.0.0",
+    "linkinator": "^6.1.0"
+  }
+}
