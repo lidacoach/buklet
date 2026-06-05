@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light only">
-<title>Пробуждение - Ключи к Себе | Лида Приходченко</title>
+<title>Лида Приходченко - Школа Осознанного Творения</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,20 +13,11 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { color-scheme: light only; background-color: #FFF8F0 !important; }
   :root {
-    --cream: #FFF8F0;
-    --beige: #F5E6D3;
-    --emerald: #50C878;
-    --deep-emerald: #2E8B57;
-    --dark-teal: #008B8B;
-    --sage: #9CAF88;
-    --terracotta: #E07A5F;
-    --gold: #F4C542;
-    --gold-dark: #C8A028;
-    --dark: #232A26;
-    --mid: #323C35;
-    --desc: #4B5C4E;
-    --subtle: #6E7D72;
-    --white: #FFFFFF;
+    --cream: #FFF8F0; --beige: #F5E6D3; --emerald: #50C878;
+    --deep-emerald: #2E8B57; --dark-teal: #008B8B; --sage: #9CAF88;
+    --terracotta: #E07A5F; --gold: #F4C542; --gold-dark: #C8A028;
+    --dark: #232A26; --mid: #323C35; --desc: #4B5C4E;
+    --subtle: #6E7D72; --white: #FFFFFF;
   }
   body {
     font-family: 'Raleway', sans-serif;
@@ -34,8 +25,8 @@
     background-color: #FFF8F0 !important;
     color: var(--dark) !important;
     min-height: 100vh;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
   }
   body::before {
     content: ''; position: fixed; width: 500px; height: 450px;
@@ -50,163 +41,181 @@
     filter: blur(80px); z-index: 0; pointer-events: none;
   }
   .container {
-    max-width: 580px; margin: 0 auto; padding: 32px 24px 48px;
+    max-width: 540px; margin: 0 auto; padding: 32px 24px 40px;
     position: relative; z-index: 1;
   }
-  /* Header */
   .header {
-    text-align: center; padding: 24px 0 28px;
-    border-top: 1px solid rgba(80,200,120,0.4);
+    text-align: center; padding-bottom: 28px;
+    border-top: 1px solid rgba(80,200,120,0.4); padding-top: 24px;
   }
   .school-name {
     font-weight: 500; font-size: 12px; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 8px;
+    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 12px;
   }
   .trainer-name {
     font-family: 'Cormorant Garamond', serif; font-weight: 600;
-    font-size: 28px; color: var(--dark); margin-bottom: 4px;
+    font-size: 28px; color: var(--dark); margin-bottom: 6px;
   }
   .trainer-title {
-    font-weight: 300; font-size: 15px; color: var(--mid); margin-bottom: 20px;
+    font-weight: 300; font-size: 16px; color: var(--mid); margin-bottom: 24px;
+  }
+  .quote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 18px; color: var(--dark-teal); line-height: 1.5; margin-bottom: 6px;
+  }
+  .quote-author {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--sage); margin-bottom: 20px;
   }
   .gold-line { width: 80px; height: 2px; background: var(--gold); margin: 0 auto; }
 
-  /* Main title */
-  .course-title {
-    font-family: 'Cormorant Garamond', serif; font-weight: 600;
-    font-size: 32px; color: var(--deep-emerald); text-align: center;
-    margin: 28px 0 6px; line-height: 1.25;
-  }
-  .course-subtitle {
-    font-family: 'Cormorant Garamond', serif; font-weight: 400;
-    font-size: 18px; color: var(--dark-teal); text-align: center;
-    margin-bottom: 24px;
-  }
-  .course-essence {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 19px; color: var(--dark-teal); text-align: center;
-    line-height: 1.5; margin-bottom: 8px; padding: 0 10px;
-  }
-
-  /* Text blocks */
-  .text-block {
-    font-size: 16px; line-height: 1.7; color: var(--dark);
-    margin-bottom: 20px;
-  }
-  .text-block p {
-    margin-bottom: 8px;
-  }
-
-  /* Section headers */
+  .section { margin-top: 28px; }
   .section-header {
-    display: flex; align-items: center; gap: 12px;
-    margin: 32px 0 18px;
+    display: flex; align-items: center; gap: 12px; margin-bottom: 6px;
   }
   .section-accent {
     width: 5px; height: 26px; border-radius: 3px; flex-shrink: 0;
-    background: var(--emerald);
   }
   .section-title {
     font-family: 'Cormorant Garamond', serif; font-weight: 600;
     font-size: 24px; color: var(--dark);
   }
-
-  /* What awaits */
-  .features {
-    background: rgba(255,255,255,0.8); border-radius: 14px;
-    padding: 20px 24px; margin-bottom: 20px;
-    border: 1px solid rgba(200,210,200,0.5);
-  }
-  .feature-item {
-    font-size: 16px; color: var(--dark); line-height: 1.6;
-    padding-left: 20px; position: relative; margin-bottom: 8px;
-  }
-  .feature-item::before {
-    content: '·'; position: absolute; left: 4px;
-    color: var(--emerald); font-weight: 700; font-size: 20px;
+  .section-subtitle {
+    font-size: 15px; color: var(--desc); margin-left: 18px; margin-bottom: 14px;
   }
 
-  /* Week cards */
-  .week-card {
-    background: rgba(255,255,255,0.8); border-radius: 12px;
-    padding: 18px 20px; margin-bottom: 10px;
-    border: 1px solid rgba(200,210,200,0.5);
+  .card {
+    background: rgba(255,255,255,0.85);
+    border: 1px solid rgba(200,210,200,0.6);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    backdrop-filter: blur(8px);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    position: relative;
   }
-  .week-num {
-    font-family: 'Cormorant Garamond', serif; font-weight: 600;
-    font-size: 15px; color: var(--deep-emerald); margin-bottom: 4px;
+  a.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-color: var(--emerald);
   }
-  .week-theme {
-    font-family: 'Cormorant Garamond', serif; font-weight: 500;
-    font-style: italic; font-size: 20px; color: var(--dark-teal);
-    margin-bottom: 8px; line-height: 1.3;
+  a.card::after {
+    content: '→';
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+    color: var(--emerald);
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
   }
-  .week-desc {
-    font-size: 15px; color: var(--desc); line-height: 1.7;
+  a.card:hover::after {
+    opacity: 1;
+    transform: translateX(4px);
   }
-  .week-desc p { margin-bottom: 4px; }
 
-  /* Info block */
-  .info-block {
-    background: var(--beige); border-radius: 14px;
-    padding: 22px 24px; margin: 24px 0;
-    border: 2px solid var(--gold);
-  }
-  .info-block p {
-    font-size: 16px; color: var(--dark); line-height: 1.7;
+  .card-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
     margin-bottom: 8px;
   }
-  .price-line {
-    font-weight: 600; font-size: 22px; color: var(--deep-emerald);
-    margin: 12px 0 4px;
+  .card-name {
+    font-weight: 600; font-size: 17px; color: var(--dark);
+    line-height: 1.3; flex: 1; padding-right: 12px;
   }
-  .price-note {
-    font-size: 15px; color: var(--desc);
+  .card-price {
+    font-weight: 600; font-size: 22px; flex-shrink: 0;
+  }
+  .price-emerald { color: var(--deep-emerald); }
+  .price-terracotta { color: var(--terracotta); }
+  .card-desc {
+    font-weight: 400; font-size: 15px; color: var(--desc); line-height: 1.4;
+  }
+  .card-note {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 15px; margin-top: 6px;
+  }
+  .note-emerald { color: var(--deep-emerald); }
+  .note-sage { color: var(--sage); }
+
+  .tag {
+    display: inline-block; background: var(--emerald); color: white;
+    font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    padding: 3px 12px; border-radius: 10px; margin-bottom: 10px;
   }
 
-  /* Video */
-  .video-wrapper {
-    position: relative; padding-bottom: 56.25%; height: 0;
-    overflow: hidden; border-radius: 14px; margin: 24px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-  .video-wrapper iframe {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    border: none;
-  }
-
-  /* Buttons */
-  .btn {
-    display: block; text-align: center; padding: 16px 24px;
-    border-radius: 12px; font-size: 16px; font-weight: 600;
-    text-decoration: none; margin-bottom: 12px;
+  .steps-two { display: flex; gap: 10px; margin-bottom: 10px; }
+  .step-card {
+    flex: 1; border-radius: 14px; padding: 18px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    text-decoration: none; color: inherit;
     transition: transform 0.2s, box-shadow 0.2s;
-    letter-spacing: 0.5px;
+    position: relative;
   }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-  .btn-primary {
-    background: var(--deep-emerald); color: white;
+  a.step-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
-  .btn-secondary {
-    background: var(--white); color: var(--deep-emerald);
-    border: 2px solid var(--emerald);
+  .step-num {
+    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55);
   }
-  .btn-gold {
-    background: var(--gold); color: var(--dark);
+  .step-name {
+    font-weight: 700; font-size: 18px; color: white; line-height: 1.25;
+    margin: 8px 0 12px;
   }
+  .step-details { list-style: none; padding: 0; margin: 0 0 12px; }
+  .step-details li {
+    font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.8);
+    line-height: 1.45; margin-bottom: 6px;
+  }
+  .step-price {
+    font-weight: 400; font-size: 16px; color: rgba(255,255,255,0.75);
+    margin-top: auto;
+  }
+  .step-emerald { background: var(--emerald); }
+  .step-teal { background: var(--dark-teal); }
+  .step-sage { background: var(--sage); }
 
-  /* Contact */
+  .step-full {
+    border-radius: 14px; padding: 16px 20px; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .step-full-left { display: flex; align-items: center; gap: 12px; }
+  .step-full .step-num { flex-shrink: 0; }
+  .step-full .step-name { margin: 0; font-size: 18px; }
+  .step-full-note {
+    font-weight: 300; font-size: 13px;
+    color: rgba(255,255,255,0.7); margin-top: 4px;
+  }
+  .step-full .step-price { flex-shrink: 0; margin: 0; }
+
+  .package {
+    background: var(--beige); border: 2px solid var(--gold);
+    border-radius: 14px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .package-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .package-star { color: var(--gold); font-size: 22px; }
+  .package-title { font-weight: 600; font-size: 16px; color: var(--dark); }
+  .package-price-row {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px;
+  }
+  .package-price { font-weight: 700; font-size: 24px; color: var(--deep-emerald); }
+  .package-old { font-weight: 300; font-size: 17px; color: var(--desc); }
+  .package-breakdown { font-size: 14px; color: var(--subtle); }
+
   .contact {
-    text-align: center; padding-top: 24px; margin-top: 28px;
-    border-top: 1px solid rgba(244,197,66,0.35);
+    text-align: center; padding-top: 24px;
+    border-top: 1px solid rgba(244,197,66,0.35); margin-top: 28px;
   }
-  .contact-item { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
-  .contact-link {
-    font-size: 16px; color: var(--deep-emerald); text-decoration: none;
-  }
+  .contact-item { font-size: 17px; color: var(--dark); margin-bottom: 8px; }
+  .contact-link { font-size: 16px; color: var(--deep-emerald); text-decoration: none; }
   .contact-link:hover { text-decoration: underline; }
 
-  /* Footer */
   .footer {
     text-align: center; margin-top: 32px; padding-top: 18px;
     border-top: 1px solid rgba(80,200,120,0.35);
@@ -217,9 +226,12 @@
   }
 
   @media (max-width: 480px) {
-    .container { padding: 24px 16px 40px; }
-    .course-title { font-size: 28px; }
-    .week-theme { font-size: 18px; }
+    .container { padding: 24px 16px 32px; }
+    .trainer-name { font-size: 26px; }
+    .section-title { font-size: 22px; }
+    .step-name { font-size: 16px; }
+    .step-card { padding: 14px; }
+    .step-details li { font-size: 12px; }
   }
 </style>
 </head>
@@ -230,179 +242,136 @@
     <div class="school-name">Школа Осознанного Творения</div>
     <div class="trainer-name">Лида Приходченко</div>
     <div class="trainer-title">Тренер эмоционального интеллекта</div>
+    <div class="quote">«Дела не всегда обстоят так, как кажется»</div>
+    <div class="quote-author">Крайон «Путешествие домой»</div>
     <div class="gold-line"></div>
   </div>
 
-  <div class="course-title">Первая ступень «Пробуждение»</div>
-  <div class="course-subtitle">Живой групповой онлайн-интенсив «Ключи к Себе»</div>
-
-  <div class="course-essence">
-    Увидеть, где ты живёшь на автопилоте, перестать реагировать на жизнь - и начать осознанно её формировать.
+  <!-- БЕСПЛАТНО -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-accent" style="background: var(--emerald);"></div>
+      <div class="section-title">БЕСПЛАТНО</div>
+    </div>
+    <a href="webinar.html" class="card">
+      <div class="tag">БЕСПЛАТНО</div>
+      <div class="card-name">Живой вебинар «Позволение быть Собой»</div>
+      <div class="card-desc">Каждая последняя среда месяца</div>
+    </a>
   </div>
 
-  <div class="text-block">
-    <p>Это 12 недель, за которые вы пройдёте путь от привычного реагирования к осознанному выбору.</p>
-    <p>Не теория - практика, которую вы будете внедрять в жизнь каждый день.</p>
-  </div>
-
-  <div class="features">
-    <div class="feature-item">12 встреч индивидуальных погружений в ощущения</div>
-    <div class="feature-item">12 недель самостоятельных практик новых привычек</div>
-    <div class="feature-item">12 недель группового исследования 5Д мышления</div>
-  </div>
-
-  <!-- Video -->
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/WMSpZMd35Wk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <!-- Program -->
-  <div class="section-header">
-    <div class="section-accent"></div>
-    <div class="section-title">Программа по неделям</div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">1 неделя</div>
-    <div class="week-theme">«Вспоминаем то, что знали, но забыли»</div>
-    <div class="week-desc">
-      <p>Знакомство.</p>
-      <p>Обсуждение будущего взаимодействия.</p>
-      <p>Домашнее задание.</p>
+  <!-- ПЕРВЫЕ ШАГИ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-accent" style="background: var(--dark-teal);"></div>
+      <div class="section-title">ПЕРВЫЕ ШАГИ</div>
+    </div>
+    <a href="praktikum.html" class="card">
+      <div class="card-top">
+        <div class="card-name">Живой практикум «Позволение быть Собой»</div>
+        <div class="card-price price-emerald">$171</div>
+      </div>
+      <div class="card-desc">7 дней · Практика навыков осознанности</div>
+      <div class="card-note note-emerald">Гарантия возврата денег</div>
+    </a>
+    <div class="card">
+      <div class="card-top">
+        <div class="card-name">Онлайн-курс «Вспоминая будущее»</div>
+        <div class="card-price price-emerald">$152</div>
+      </div>
+      <div class="card-desc">В записи · Измени свою историю</div>
     </div>
   </div>
 
-  <div class="week-card">
-    <div class="week-num">2 неделя</div>
-    <div class="week-theme">«Ты всё сделала правильно!»</div>
-    <div class="week-desc">
-      <p>Рождение ЭГО.</p>
-      <p>Система убеждений и её влияние на нашу жизнь.</p>
-      <p>Принятие правил.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
+  <!-- ИНДИВИДУАЛЬНАЯ РАБОТА -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-accent" style="background: var(--terracotta);"></div>
+      <div class="section-title">ИНДИВИДУАЛЬНАЯ РАБОТА</div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="card-name">Онлайн/оффлайн личная консультация</div>
+        <div class="card-price price-terracotta">$150</div>
+      </div>
+      <div class="card-desc">Разовая встреча · Ваш запрос - моё внимание</div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="card-name">Онлайн-сопровождение «Путешествие к Себе»</div>
+        <div class="card-price price-terracotta">$3 500</div>
+      </div>
+      <div class="card-desc">12 встреч · 1 раз в неделю · Ваша тема</div>
+      <div class="card-note note-sage">Включает бесплатную установочную встречу</div>
     </div>
   </div>
 
-  <div class="week-card">
-    <div class="week-num">3 неделя</div>
-    <div class="week-theme">«Куда внимание, туда и энергия»</div>
-    <div class="week-desc">
-      <p>Автор/Жертва.</p>
-      <p>Осознание своего выбора.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
+  <!-- КЛЮЧИ К СЕБЕ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-accent" style="background: var(--gold-dark);"></div>
+      <div class="section-title">КЛЮЧИ К СЕБЕ</div>
+    </div>
+    <div class="section-subtitle">Живой групповой онлайн-интенсив</div>
+
+    <div class="steps-two">
+      <a href="prabuzhdenie.html" class="step-card step-emerald">
+        <div>
+          <div class="step-num">01</div>
+          <div class="step-name">ПРОБУЖДЕНИЕ</div>
+          <ul class="step-details">
+            <li>12 встреч индивидуальных погружений в ощущения</li>
+            <li>12 недель самостоятельных практик новых привычек</li>
+            <li>12 недель группового исследования 5Д мышления</li>
+          </ul>
+        </div>
+        <div class="step-price">$2 500</div>
+      </a>
+      <a href="osoznanie.html" class="step-card step-teal">
+        <div>
+          <div class="step-num">02</div>
+          <div class="step-name">ОСОЗНАНИЕ</div>
+          <ul class="step-details">
+            <li>2 блока онлайн-исследования</li>
+            <li>Каждые 2 недели новый аспект</li>
+            <li>11 недель самостоятельной практики</li>
+            <li>Поддержка тренера в групповом чате</li>
+          </ul>
+        </div>
+        <div class="step-price">с июня 2026</div>
+      </a>
+    </div>
+
+    <div class="step-full step-sage">
+      <div>
+        <div class="step-full-left">
+          <span class="step-num">03</span>
+          <span class="step-name">ТВОРЕНИЕ</span>
+        </div>
+        <div class="step-full-note">→ доступно после прохождения первых двух ступеней</div>
+      </div>
+      <div class="step-price">скоро</div>
+    </div>
+
+    <!-- Package -->
+    <div class="package">
+      <div class="package-header">
+        <span class="package-star">★</span>
+        <span class="package-title">ПАКЕТ: Пробуждение + Путешествие к Себе</span>
+      </div>
+      <div class="package-price-row">
+        <span class="package-price">$3 500</span>
+        <span class="package-old">вместо $6 000</span>
+      </div>
+      <div class="package-breakdown">Пробуждение $2 000 + Путешествие к Себе $1 500</div>
     </div>
   </div>
-
-  <div class="week-card">
-    <div class="week-num">4 неделя</div>
-    <div class="week-theme">«Свобода начинается с выбора»</div>
-    <div class="week-desc">
-      <p>Пересмотр правил жизни.</p>
-      <p>Осознание своего выбора.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">5 неделя</div>
-    <div class="week-theme">«Что внутри, то и снаружи»</div>
-    <div class="week-desc">
-      <p>Закон отражения.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">6 неделя</div>
-    <div class="week-theme">«Вся наша жизнь - Игра!»</div>
-    <div class="week-desc">
-      <p>Практика игры.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">7 неделя</div>
-    <div class="week-theme">«Игра, как наша Жизнь»</div>
-    <div class="week-desc">
-      <p>Осознание своих ролей в игре, как в жизни.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">8 неделя</div>
-    <div class="week-theme">«Не важно, куда Ты смотришь, важно, что Ты видишь»</div>
-    <div class="week-desc">
-      <p>Трансформация убеждения.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">9 неделя</div>
-    <div class="week-theme">«Кто Я?»</div>
-    <div class="week-desc">
-      <p>Практика исследования Себя.</p>
-      <p>Выход за пределы игр и ролей.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">10 неделя</div>
-    <div class="week-theme">«Кто говорит? Кто наблюдает?»</div>
-    <div class="week-desc">
-      <p>Практика исследования Себя, того кто деятель.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">11 неделя</div>
-    <div class="week-theme">«Жизнь - игра в радость!»</div>
-    <div class="week-desc">
-      <p>Практика игры с друзьями.</p>
-      <p>Рефлексия.</p>
-      <p>Домашнее задание.</p>
-    </div>
-  </div>
-
-  <div class="week-card">
-    <div class="week-num">12 неделя</div>
-    <div class="week-theme">«Подведение итогов»</div>
-    <div class="week-desc">
-      <p>Большая рефлексия.</p>
-      <p>Выпускной.</p>
-    </div>
-  </div>
-
-  <!-- How it works -->
-  <div class="info-block">
-    <p>Тренинги проходят в выходной день, с 10:00 до 18:00 по времени Калифорнии (PST), онлайн через Zoom, с короткими и большими перерывами.</p>
-    <p>Курс проходит в закрытой группе Телеграм.</p>
-    <p>По окончанию курса вы получите все записи тренингов.</p>
-    <div class="price-line">Стоимость: $2 500</div>
-    <div class="price-note">Скидка обсуждается дополнительно.</div>
-  </div>
-
-  <!-- Buttons -->
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmUz4DFv6VacQAOxqPWQ20R6qvVJI8kVsIwg-5xoj1ufQ8ng/viewform" target="_blank" class="btn btn-primary">ПРЕДЗАПИСЬ НА КУРС</a>
-  <a href="praktikum.html" class="btn btn-secondary">ПОПРОБУЙ НА ПРАКТИКЕ</a>
 
   <!-- Contact -->
   <div class="contact">
-    <div class="contact-item">Telegram: <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a></div>
+    <div class="contact-item">Telegram: @lidacoach</div>
     <div class="contact-item">Facebook: @lidacoach</div>
+    <a href="https://t.me/lidacoach" class="contact-link">t.me/lidacoach</a>
   </div>
 
   <div class="footer">
