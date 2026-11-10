@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>Индивидуальная сессия | Лида Приходченко</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { color-scheme: light only; background-color: #FFF8F0 !important; }
+  :root {
+    --cream: #FFF8F0; --beige: #F5E6D3; --emerald: #50C878;
+    --deep-emerald: #2E8B57; --dark-teal: #008B8B; --sage: #9CAF88;
+    --terracotta: #E07A5F; --gold: #F4C542; --gold-dark: #C8A028;
+    --dark: #232A26; --mid: #323C35; --desc: #4B5C4E;
+    --subtle: #6E7D72; --white: #FFFFFF;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--cream) !important; color: var(--dark) !important;
+    min-height: 100vh; overflow-x: hidden; position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; width: 450px; height: 400px;
+    top: -80px; left: -100px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(224,122,95,0.14) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; width: 400px; height: 350px;
+    bottom: -50px; right: -80px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(80,200,120,0.14) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  .container {
+    max-width: 580px; margin: 0 auto; padding: 32px 24px 48px;
+    position: relative; z-index: 1;
+  }
+  .header {
+    text-align: center; padding: 24px 0 28px;
+    border-top: 1px solid rgba(224,122,95,0.45);
+  }
+  .school-name {
+    font-weight: 500; font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 8px;
+  }
+  .trainer-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 28px; color: var(--dark); margin-bottom: 4px;
+  }
+  .trainer-title {
+    font-weight: 300; font-size: 15px; color: var(--mid); margin-bottom: 20px;
+  }
+  .gold-line { width: 80px; height: 2px; background: var(--gold); margin: 0 auto; }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 30px; color: var(--terracotta); text-align: center;
+    margin: 28px 0 8px; line-height: 1.3;
+  }
+  .page-lead {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 19px; color: var(--dark-teal); text-align: center;
+    line-height: 1.5; margin-bottom: 24px;
+  }
+
+  /* Блок «обо мне»: фото + текст */
+  .about {
+    display: flex; gap: 20px; align-items: flex-start; margin-bottom: 8px;
+  }
+  .about-photo {
+    width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0;
+    background: var(--beige); border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--subtle); text-align: center; padding: 8px;
+    object-fit: cover;
+  }
+  .text-block {
+    font-size: 16px; line-height: 1.7; color: var(--dark); margin-bottom: 20px;
+  }
+  .text-block p { margin-bottom: 10px; }
+
+  .section-header {
+    display: flex; align-items: center; gap: 12px; margin: 28px 0 16px;
+  }
+  .section-accent { width: 5px; height: 26px; border-radius: 3px; flex-shrink: 0; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 24px; color: var(--dark);
+  }
+
+  /* Темы сессий */
+  .topic-card {
+    background: rgba(255,255,255,0.8); border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 10px;
+    border: 1px solid rgba(200,210,200,0.5);
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .topic-num {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 22px; color: var(--terracotta); line-height: 1; flex-shrink: 0;
+    min-width: 28px;
+  }
+  .topic-name {
+    font-weight: 600; font-size: 16px; color: var(--dark); margin-bottom: 4px;
+  }
+  .topic-desc { font-size: 15px; color: var(--desc); line-height: 1.6; }
+
+  /* Формат и цена */
+  .info-block {
+    background: var(--beige); border-radius: 14px;
+    padding: 22px 24px; margin: 24px 0; border: 2px solid var(--gold);
+  }
+  .info-block p { font-size: 16px; color: var(--dark); line-height: 1.7; margin-bottom: 8px; }
+  .price-line { font-weight: 600; font-size: 22px; color: var(--terracotta); margin: 12px 0 4px; }
+  .price-note { font-size: 15px; color: var(--deep-emerald); font-style: italic; }
+
+  .btn {
+    display: block; text-align: center; padding: 16px 24px;
+    border-radius: 12px; font-size: 16px; font-weight: 600;
+    text-decoration: none; margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.5px;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .btn-primary { background: var(--terracotta); color: white; }
+  .btn-secondary { background: var(--white); color: var(--deep-emerald); border: 2px solid var(--emerald); }
+  .btn-back {
+    background: transparent; color: var(--desc); border: 1px solid rgba(200,210,200,0.5);
+    font-weight: 400; font-size: 15px;
+  }
+  .btn-hint { text-align: center; font-size: 14px; color: var(--subtle); margin: -4px 0 20px; }
+
+  .contact {
+    text-align: center; padding-top: 24px; margin-top: 28px;
+    border-top: 1px solid rgba(244,197,66,0.35);
+  }
+  .contact-item { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .contact-link { font-size: 16px; color: var(--deep-emerald); text-decoration: none; }
+  .contact-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center; margin-top: 32px; padding-top: 18px;
+    border-top: 1px solid rgba(80,200,120,0.35);
+  }
+  .footer-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--deep-emerald);
+  }
+
+  /* Заглушки: убрать класс .draft, когда текст готов */
+  .draft { color: var(--subtle); font-style: italic; }
+
+  @media (max-width: 480px) {
+    .container { padding: 24px 16px 40px; }
+    .page-title { font-size: 26px; }
+    .about { flex-direction: column; align-items: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="school-name">Школа Осознанного Творения</div>
+    <div class="trainer-name">Лида Приходченко</div>
+    <div class="trainer-title">Тренер эмоционального интеллекта</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="page-title">Индивидуальная сессия<br>с Лидой</div>
+  <div class="page-lead">Ваш запрос - моё внимание</div>
+
+  <!-- ОБО МНЕ -->
+  <div class="section-header">
+    <div class="section-accent" style="background: var(--terracotta);"></div>
+    <div class="section-title">Обо мне</div>
+  </div>
+
+  <div class="about">
+    <!-- Заменить на <img class="about-photo" src="..." alt="Лида Приходченко"> -->
+    <div class="about-photo">фото</div>
+    <div class="text-block">
+      <p class="draft">[Здесь будет текст о Лиде. Лида пришлёт его отдельно.]</p>
+    </div>
+  </div>
+
+  <!-- ТЕМЫ СЕССИЙ -->
+  <div class="section-header">
+    <div class="section-accent" style="background: var(--dark-teal);"></div>
+    <div class="section-title">С чем приходят на сессию</div>
+  </div>
+
+  <div class="topic-card">
+    <div class="topic-num">01</div>
+    <div>
+      <div class="topic-name draft">[Тема 1]</div>
+      <div class="topic-desc draft">[Одна-две строки: что это за запрос и что происходит на сессии.]</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">02</div>
+    <div>
+      <div class="topic-name draft">[Тема 2]</div>
+      <div class="topic-desc draft">[...]</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">03</div>
+    <div>
+      <div class="topic-name draft">[Тема 3]</div>
+      <div class="topic-desc draft">[...]</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">04</div>
+    <div>
+      <div class="topic-name draft">[Тема 4]</div>
+      <div class="topic-desc draft">[...]</div>
+    </div>
+  </div>
+
+  <!-- ФОРМАТ -->
+  <div class="info-block">
+    <p>Онлайн или оффлайн. Разовая встреча.</p>
+    <p class="draft">[Длительность: уточнить. Площадка: Zoom?]</p>
+    <div class="price-line">Стоимость: $150</div>
+    <div class="price-note draft">[Что происходит после записи: ссылка на Zoom придёт на почту и т.п.]</div>
+  </div>
+
+  <!-- ЗАПИСЬ -->
+  <a href="https://calendly.com/lidacoach" target="_blank" rel="noopener" class="btn btn-primary">ВЫБРАТЬ ВРЕМЯ СЕССИИ</a>
+  <div class="btn-hint">Откроется календарь: выбираете день и время, встреча сразу попадает в наши календари</div>
+  <a href="https://t.me/lidacoach" target="_blank" rel="noopener" class="btn btn-secondary">НАПИСАТЬ МНЕ В TELEGRAM</a>
+  <a href="index.html" class="btn btn-back">← Все программы</a>
+
+  <!-- Contact -->
+  <div class="contact">
+    <div class="contact-item">Telegram: <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a></div>
+    <div class="contact-item">Facebook: @lidacoach</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">Для женщин, которые возвращаются к Себе</div>
+  </div>
+
+</div>
+</body>
+</html>
