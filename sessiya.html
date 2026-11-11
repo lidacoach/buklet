@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>Индивидуальная сессия | Лида Приходченко</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { color-scheme: light only; background-color: #FFF8F0 !important; }
+  :root {
+    --cream: #FFF8F0; --beige: #F5E6D3; --emerald: #50C878;
+    --deep-emerald: #2E8B57; --dark-teal: #008B8B; --sage: #9CAF88;
+    --terracotta: #E07A5F; --gold: #F4C542; --gold-dark: #C8A028;
+    --dark: #232A26; --mid: #323C35; --desc: #4B5C4E;
+    --subtle: #6E7D72; --white: #FFFFFF;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--cream) !important; color: var(--dark) !important;
+    min-height: 100vh; overflow-x: hidden; position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; width: 450px; height: 400px;
+    top: -80px; left: -100px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(224,122,95,0.14) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; width: 400px; height: 350px;
+    bottom: -50px; right: -80px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(80,200,120,0.14) 0%, transparent 70%);
+    filter: blur(80px); z-index: 0; pointer-events: none;
+  }
+  .container {
+    max-width: 580px; margin: 0 auto; padding: 32px 24px 48px;
+    position: relative; z-index: 1;
+  }
+  .header {
+    text-align: center; padding: 24px 0 28px;
+    border-top: 1px solid rgba(224,122,95,0.45);
+  }
+  .school-name {
+    font-weight: 500; font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--deep-emerald); margin-bottom: 8px;
+  }
+  .trainer-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 28px; color: var(--dark); margin-bottom: 4px;
+  }
+  .trainer-title {
+    font-weight: 300; font-size: 15px; color: var(--mid); margin-bottom: 20px;
+  }
+  .gold-line { width: 80px; height: 2px; background: var(--gold); margin: 0 auto; }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 30px; color: var(--terracotta); text-align: center;
+    margin: 28px 0 8px; line-height: 1.3;
+  }
+  .page-lead {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 19px; color: var(--dark-teal); text-align: center;
+    line-height: 1.5; margin-bottom: 24px;
+  }
+
+  .section-header {
+    display: flex; align-items: center; gap: 12px; margin: 28px 0 16px;
+  }
+  .section-accent { width: 5px; height: 26px; border-radius: 3px; flex-shrink: 0; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 24px; color: var(--dark);
+  }
+
+  /* Обо мне */
+  .about-photo {
+    float: left; width: 170px; height: auto; border-radius: 16px;
+    margin: 4px 20px 10px 0; border: 2px solid var(--gold);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .text-block {
+    font-size: 16px; line-height: 1.7; color: var(--dark); margin-bottom: 20px;
+  }
+  .text-block p { margin-bottom: 12px; }
+  .text-block ul { margin: 0 0 12px 22px; }
+  .text-block li { margin-bottom: 4px; }
+  .text-block .accent {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 20px; color: var(--deep-emerald); line-height: 1.4;
+  }
+  .clear { clear: both; }
+
+  /* Темы сессий */
+  .topic-card {
+    background: rgba(255,255,255,0.8); border-radius: 12px;
+    padding: 16px 20px; margin-bottom: 10px;
+    border: 1px solid rgba(200,210,200,0.5);
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .topic-num {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 22px; color: var(--terracotta); line-height: 1.1; flex-shrink: 0;
+    min-width: 28px;
+  }
+  .topic-name {
+    font-weight: 600; font-size: 16px; color: var(--dark); margin-bottom: 4px;
+  }
+  .topic-desc { font-size: 15px; color: var(--desc); line-height: 1.6; }
+
+  /* Формат и цена */
+  .info-block {
+    background: var(--beige); border-radius: 14px;
+    padding: 22px 24px; margin: 28px 0 20px; border: 2px solid var(--gold);
+  }
+  .info-block p { font-size: 16px; color: var(--dark); line-height: 1.7; margin-bottom: 6px; }
+  .price-line { font-weight: 600; font-size: 22px; color: var(--terracotta); margin: 12px 0 0; }
+
+  .btn {
+    display: block; text-align: center; padding: 16px 24px;
+    border-radius: 12px; font-size: 16px; font-weight: 600;
+    text-decoration: none; margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.5px;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .btn-primary { background: var(--terracotta); color: white; }
+  .btn-back {
+    background: transparent; color: var(--desc); border: 1px solid rgba(200,210,200,0.5);
+    font-weight: 400; font-size: 15px;
+  }
+  .after-btn {
+    font-size: 15px; color: var(--desc); line-height: 1.7; text-align: center;
+    margin: 4px 0 24px;
+  }
+  .after-btn p { margin-bottom: 8px; }
+
+  .quote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 19px; color: var(--dark-teal); line-height: 1.5;
+    text-align: center; margin: 8px 0 4px;
+  }
+  .quote-author {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--sage); text-align: center; margin-bottom: 20px;
+  }
+
+  .contact {
+    text-align: center; padding-top: 24px; margin-top: 28px;
+    border-top: 1px solid rgba(244,197,66,0.35);
+  }
+  .contact-item { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .contact-link { font-size: 16px; color: var(--deep-emerald); text-decoration: none; }
+  .contact-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center; margin-top: 32px; padding-top: 18px;
+    border-top: 1px solid rgba(80,200,120,0.35);
+  }
+  .footer-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--deep-emerald);
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 24px 16px 40px; }
+    .page-title { font-size: 26px; }
+    .about-photo { float: none; display: block; width: 200px; margin: 0 auto 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="school-name">Школа Осознанного Творения</div>
+    <div class="trainer-name">Лида Приходченко</div>
+    <div class="trainer-title">Медиатор по моделированию радостного настоящего</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="page-title">Индивидуальная сессия<br>с Лидой</div>
+  <div class="page-lead">Ваш запрос - моё внимание</div>
+
+  <!-- ОБО МНЕ -->
+  <div class="section-header">
+    <div class="section-accent" style="background: var(--terracotta);"></div>
+    <div class="section-title">Обо мне</div>
+  </div>
+
+  <div class="text-block">
+    <img class="about-photo" src="lida.jpg" alt="Лида Приходченко">
+    <p>Давайте я вас познакомлю с собой, а на онлайн-встрече я познакомлюсь с вами.</p>
+    <p>Меня зовут Лида, и я медиатор по моделированию радостного настоящего) А это значит, со мной кроме радости ничего не светит😉 Не шучу)</p>
+    <p>Я человек открытый во всех отношениях, и поэтому мне очень легко общаться с любым человеком. Но так было не всегда.</p>
+    <p>Я много лет была в психологии и коучинге, но чем больше я изучала эти направления, тем больше понимала, что там есть радость, но она временная. А я искала радость как норму жизни, без выпаданий из неё.</p>
+    <p>Всё моё любопытство было направлено на тему отношений, так как многие годы я не могла выстроить отношения с внешним миром, потому что не знала, что отношения начинаются внутри меня.</p>
+    <p>Я искала тех, кто полюбит меня. Я искала тех, кто позаботится обо мне. Я искала тех, кто поймёт меня, и у меня перестанет болеть внутри.</p>
+    <p>Я искала возможность избавиться от боли, которую я чувствовала в отношениях с другими людьми.</p>
+    <p>В моей жизни было много разных историй, которые развернулись так, что в результате я стала той,</p>
+    <ul>
+      <li>которая слышит других людей,</li>
+      <li>чувствует всё то, что болит у других,</li>
+      <li>«знает» практически все мысли, от которых больно,</li>
+      <li>и «видит слепые места» в отношениях.</li>
+    </ul>
+    <p>НО самое главное открытие, которое я сделала, это то, что совсем не обязательно жить так, чтобы было больно.</p>
+    <p class="accent">Это можно НЕ выбирать. Можно НЕ выбирать жить в боли. Можно выбирать жить так, как хочется.</p>
+    <p>Мне хотелось жить в радости и удовольствии - теперь я так и живу.</p>
+    <p>Я так живу и в своих сессиях приглашаю именно в такую жизнь, но не настаиваю. Я не люблю, когда меня ограничивают в свободе, поэтому и я никому ничего не навязываю.</p>
+    <p>Интересно - записывайтесь, и увидимся.<br>Не интересно - нет проблем. Я всегда рада честному выбору человека.</p>
+    <p class="accent">Ближе, чем мы у Себя, больше никого нет.</p>
+    <div class="clear"></div>
+  </div>
+
+  <!-- ТЕМЫ СЕССИЙ -->
+  <div class="section-header">
+    <div class="section-accent" style="background: var(--dark-teal);"></div>
+    <div class="section-title">С чем приходят на сессию</div>
+  </div>
+
+  <div class="topic-card">
+    <div class="topic-num">01</div>
+    <div>
+      <div class="topic-name">Доверие будущему</div>
+      <div class="topic-desc">Ум рисует худшее наперёд, а тело живёт в этом худшем уже сейчас. Смотрим, откуда берётся страх перед тем, чего ещё нет, и что в вас знает: всё складывается.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">02</div>
+    <div>
+      <div class="topic-name">Жизнь в радости</div>
+      <div class="topic-desc">Радость как норма, а не как праздник по расписанию. Что в вас решило, что радоваться можно, только когда всё хорошо, и как это решение переиграть.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">03</div>
+    <div>
+      <div class="topic-name">Возвращение к Себе</div>
+      <div class="topic-desc">Столько лет жили для других, что уже непонятно, где там вы. Ищем ту, что была до ролей «удобная», «сильная», «правильная».</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">04</div>
+    <div>
+      <div class="topic-name">Вкус жизни</div>
+      <div class="topic-desc">Когда всё вроде есть, а вкуса нет: ни еда, ни люди, ни дела не цепляют. Возвращаем чувствование, без него жизнь идёт как кино без звука.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">05</div>
+    <div>
+      <div class="topic-name">Свобода чувств</div>
+      <div class="topic-desc">Злость, зависть, обида: то, что «нельзя», а оно есть. Смотрим, что эти чувства вам подсказывают, вместо того чтобы прятать их от себя и от других.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">06</div>
+    <div>
+      <div class="topic-name">Сердце без обид</div>
+      <div class="topic-desc">Обида держит вас крепче, чем тот, на кого вы обижены. Смотрим, какую выгоду она вам даёт, и отпускаем не через «надо простить», а через понимание.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">07</div>
+    <div>
+      <div class="topic-name">Свобода желаний</div>
+      <div class="topic-desc">Хотеть страшно: вдруг не сбудется, вдруг осудят, вдруг слишком. Вспоминаем, как хотеть по-настоящему, из Сердца, а не из «так положено».</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">08</div>
+    <div>
+      <div class="topic-name">Позволение быть Собой</div>
+      <div class="topic-desc">Быть собой, пока никто не видит, легко. А при маме, муже, начальнице? Находим, где вы себя сворачиваете, и что будет, если перестать.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">09</div>
+    <div>
+      <div class="topic-name">Лёгкость в отношениях</div>
+      <div class="topic-desc">Отношения начинаются внутри вас, а не с тем, кто напротив. Смотрим, в какую игру вы играете с близкими, и как выйти из неё в контакт без боли.</div>
+    </div>
+  </div>
+  <div class="topic-card">
+    <div class="topic-num">10</div>
+    <div>
+      <div class="topic-name">Доверие к жизни</div>
+      <div class="topic-desc">Жизнь не враг, которого надо контролировать. Смотрим, где вы держите всё на себе, и что происходит, когда руки разжимаются.</div>
+    </div>
+  </div>
+
+  <!-- ФОРМАТ -->
+  <div class="info-block">
+    <p>Личные сессии я провожу по средам.</p>
+    <p>Онлайн · 60 минут · разовая встреча</p>
+    <p>Выбирайте удобное время и записывайтесь.</p>
+    <div class="price-line">Стоимость: $150</div>
+  </div>
+
+  <!-- ЗАПИСЬ -->
+  <!-- Ссылка на бота записи: заменить href, когда бот будет готов -->
+  <a href="https://t.me/lidacoach" target="_blank" rel="noopener" class="btn btn-primary">ЗАПИСАТЬСЯ НА СЕССИЮ</a>
+
+  <div class="after-btn">
+    <p>Дальше вы перейдёте к моему помощнику, который вас запишет на удобное для вас время. Все вопросы вы можете задать ему, и он вам с радостью ответит.</p>
+    <p>Обнимаю, увидимся.</p>
+  </div>
+
+  <div class="quote">«Дела не всегда обстоят так, как кажется»</div>
+  <div class="quote-author">Крайон «Путешествие домой»</div>
+
+  <a href="index.html" class="btn btn-back">← Все программы</a>
+
+  <!-- Contact -->
+  <div class="contact">
+    <div class="contact-item">Telegram: <a href="https://t.me/lidacoach" class="contact-link">@lidacoach</a></div>
+    <div class="contact-item">Facebook: @lidacoach</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">Для женщин, которые возвращаются к Себе</div>
+  </div>
+
+</div>
+</body>
+</html>
